@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/Testcase1.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/Testcase1.py" />
+              <option name="originalContent" value="import unittest&#10;from selenium import webdriver&#10;from selenium.webdriver.chrome.service import Service&#10;from selenium.webdriver.chrome.options import Options&#10;import time&#10;&#10;&#10;class TestBrowserLaunch(unittest.TestCase):&#10;&#10;    def __init__(self, methodName: str = &quot;runTest&quot;):&#10;        super().__init__(methodName)&#10;        self.driver = None&#10;&#10;    def setUp(self):&#10;        options = Options()&#10;        # Initialize the WebDriver with Chrome options&#10;        self.driver = webdriver.Chrome(options=options)&#10;        self.driver.implicitly_wait(10)  # Wait for elements if needed&#10;&#10;    def test_launch_browser(self):&#10;        try:&#10;            self.driver.get(&quot;https://www.google.com&quot;)&#10;            time.sleep(3)  # Pause for visibility (not required for actual test)&#10;            self.assertIn(&quot;Google&quot;, self.driver.title)&#10;            # ✅ Pass if page title contains 'Google'&#10;            print(&quot;Test Passed: Browser launched and Google opened successfully.&quot;)&#10;        except Exception as e:&#10;            print(f&quot;Test Failed: {e}&quot;)&#10;            self.fail(&quot;Browser did not launch or load Google page correctly.&quot;)&#10;&#10;    def tearDown(self):&#10;        if self.driver:&#10;            self.driver.quit()  # Close the browser&#10;&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    unittest.main()&#10;" />
+              <option name="updatedContent" value="import unittest&#10;from selenium import webdriver&#10;from selenium.webdriver.chrome.options import Options&#10;import time&#10;&#10;&#10;class TestBrowserLaunch(unittest.TestCase):&#10;&#10;    def __init__(self, methodName: str = &quot;runTest&quot;):&#10;        super().__init__(methodName)&#10;        self.driver = None&#10;&#10;    def setUp(self):&#10;        options = Options()&#10;        # Initialize the WebDriver with Chrome options&#10;        self.driver = webdriver.Chrome(options=options)&#10;        self.driver.implicitly_wait(10)  # Wait for elements if needed&#10;&#10;    def test_launch_browser(self):&#10;        try:&#10;            self.driver.get(&quot;https://www.google.com&quot;)&#10;            time.sleep(3)  # Pause for visibility (not required for actual test)&#10;            self.assertIn(&quot;Google&quot;, self.driver.title)&#10;            # ✅ Pass if page title contains 'Google'&#10;            print(&quot;Test Passed: Browser launched and Google opened successfully.&quot;)&#10;        except Exception as e:&#10;            print(f&quot;Test Failed: {e}&quot;)&#10;            self.fail(&quot;Browser did not launch or load Google page correctly.&quot;)&#10;&#10;    def tearDown(self):&#10;        if self.driver:&#10;            self.driver.quit()  # Close the browser&#10;&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    unittest.main()" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
